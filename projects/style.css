@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+*{
+    font-family: 'Noto Sans Thai', sans-serif;
+    
+}
+
+/* .slide {
+    
+  } */
+
+  .carousel {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent images from wrapping to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    scroll-snap-type: x mandatory; /* Enable smooth horizontal scrolling */
+    height: 300px; /* Set a fixed height for the carousel container */
+  }
+  
+  .slide {
+    display: none;
+    flex: 0 0 auto; /* Prevent images from growing or shrinking */
+    scroll-snap-align: start; /* Align images to the start of the scroll container */
+    padding: 0 10px; /* Add some space between images */
+  }
+  
+  @media (max-width: 768px) {
+    .carousel {
+      height: auto; /* Adjust height for smaller screens */
+      flex-direction: column; /* Stack images vertically */
+      align-items: center; /* Center images horizontally */
+      overflow-x: hidden; /* Disable horizontal scrolling */
+    }
+    
+    .slide {
+      width: 100%; /* Take up full width of the container */
+      padding: 10px 0; /* Adjust vertical spacing */
+    }
+  }
+  
